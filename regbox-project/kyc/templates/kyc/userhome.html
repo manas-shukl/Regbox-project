@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+
+
+
+
+
+
+    <meta charset="UTF-8">
+    <title>Regbox Home</title>
+</head>
+{% extends 'kyc/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+
+
+
+
+<!-- <body id="bg"  style="background-size: cover; background-repeat: none;  background-image: url('{% static 'image/BacgroundF.png' %}');"> -->
+
+
+
+
+
+
+
+
+
+
+<h1 style="text-align:center;">          </h1>
+<!--<a href="{% url 'loginuser' %}" >Login</a>-->
+<!-- <img src="{% static 'image/BacgroundF.png' %}" alt=""> -->
+<a href="{% url 'upload' %}">Upload A Card</a>  <br>
+<a href="{% url 'available_docs' %}">View already uploaded docs</a>
+
+
+
+
+
+</body>
+
+{% endblock %}
+</html>
+

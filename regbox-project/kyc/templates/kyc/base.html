@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+
+<!---------------------------Nav !--------->
+
+
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
+
+<title>Hello, world!</title>
+
+
+<div class="topnav">
+    <a href="{% url 'home' %}" class="active" id="a0"
+       style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-style: italic;">Regbox.io</a>
+    {% if user.is_authenticated %}
+
+
+    <a href="{% url 'logoutuser' %}" id="a7" style="float: right;">Logout</a>
+    <a href="{% url 'upload' %}" id="a8" style="float: right;">Start uploading docs</a>
+    <a href="{% url 'index' %}" id="a9" style="float: right;">Dashboard</a>
+
+
+    {% else %}
+    <a href="{% url 'signup' %}" id="a1" style="float: right;">Signup</a>
+    <a href="{% url 'loginuser' %}" id="a2" style="float: right;">Login</a>
+    {% endif %}
+    <a href="#home" id="a3" style="float: right;">Contact</a>
+    <a href="#home" id="a4" style="float: right;">About</a>
+
+    <a href="#home" id="a5" style="float: right;">Review Platform</a>
+    <a href="{% url 'regbox' %}" id="a6" style="float: right;">RegBox</a>
+    <!-- <a href="#home" id="a2" style="float: right;">GrayBox</a> -->
+    <!--<form action="{% url 'logoutuser' %}" method="POST">-->
+    <!--{% csrf_token %}-->
+    <!--<button type="submit">Logout</button>-->
+    <!--</form>-->
+
+</div>
+<!-- <button type="button">Request Demo <style padding: 100px 0px 1000px 0px;></style></button> -->
+
+
+<style>
+
+
+
+    
+    .topnav{
+        background-color: #0a0f36 ;
+        position: relative;
+        /* position: fixed; */
+        top: 0; 
+        width: 100%;
+        
+        /* text-align: center; */
+        min-height: 50px;
+        color: white;
+        width: auto;
+        margin: 0px;
+        border: 0px;
+        padding: 0px;
+        /* font-size: 45px;
+        font-weight: bold; */
+        overflow: auto;
+    }
+    .topnav a {
+        float: left;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+    .topnav :hover {
+    background-color: #ddd;
+    color: black;
+
+    }
+    .topnav :active {
+        background-color: #4CAF50;
+        color: white;
+    }
+  
+    
+    }
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+
+
+<!---------------------------Nav ends !--------->
+
+
+<!--<a href="{% url 'home' %}">Home</a> <br>-->
+<!--{% if user.is_authenticated %}-->
+<!--<h4>Welcome {{ user.get_username }}</h4>-->
+
+<!--<form action="{% url 'logoutuser' %}" method="POST">-->
+<!--{% csrf_token %}-->
+<!--<button type="submit">Logout</button>-->
+<!--</form>-->
+
+<!--{% else %}-->
+<!--<a href="{% url 'signup' %}">Signup</a>-->
+<!--<a href="{% url 'loginuser' %}">login</a>-->
+<!--{% endif %}-->
+{% block content %} {% endblock %}
+
+</body>
+</html>
+

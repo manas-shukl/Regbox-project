@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% extends 'kyc/base.html' %}
+    <meta charset="UTF-8">
+    <title>Available Docs</title>
+</head>
+
+{% block content %}
+<body>
+{% for doc in docs %}
+<a href="{% url 'view_doc' doc.id %}"> {{ doc.file_name }} </a>
+<br>
+{% endfor %}
+</body>
+{% endblock %}
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% extends 'kyc/base.html' %}
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>View Doc Details</title>
+</head>
+{% block content %}
+<br>
+<br>
+<body style="background-size: cover; background-repeat: none;  background-image: url('{% static 'image/BacgroundF.png' %}');">
+
+
+<div class="row">
+    <div class="col-sm-6">
+        <div class="card1">
+            <div class="card-body">
+                <h5 class="card-title">File Details</h5>
+                {{form.as_p}}
+                <a href="{{doc.file_uploaded.url}}" target="_blank">
+                    <img src="{{ doc.file_uploaded.url }}" width="300" height="150"/>
+                </a>
+                <br>
+                <br>
+                <button type="submit" class="submit">Save</button>
+                <br>
+                <br>
+                <form method="POST" action="{% url 'delete_doc' doc.id %}">
+                    {% csrf_token %}
+                    <div>
+                        <button type="submit" class="submit">Delete</button>
+                    </div>
+                </form>
+                <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">OCR Extracted Text</h5>
+                {{f2.as_p}}
+                <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--<div class="span6">-->
+<!--<form method="POST" enctype="multipart/form-data">-->
+<!--{% csrf_token %}-->
+<!--{{form.as_p}}-->
+<!--<div>-->
+<!--<button type="submit">Save</button>-->
+<!--</div>-->
+<!--</form>-->
+<!--<br>-->
+<!--<img src="{{ doc.file_uploaded.url }}" width="300" height="150"/>-->
+<!--<br>-->
+<!--<form method="POST" action="{% url 'delete_doc' doc.id %}">-->
+<!--{% csrf_token %}-->
+<!--<div>-->
+<!--<button type="submit">Delete</button>-->
+<!--</div>-->
+<!--</form>-->
+<!--</div>-->
+
+
+<!--<div class="span6">-->
+<!--{{f2.as_p}}-->
+<!--</div>-->
+
+
+<!--</div>-->
+<style>
+    .card {
+        background-color: #FFFFFF;
+        width: 400px;
+        height: 400px;
+        /* margin: 7em auto; */
+        float: left;
+        align-self: center;
+        margin-top: 50px;
+        margin-left: 40px;
+        border-radius: 1.5em;
+        box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+    }
+
+    .card1 {
+        background-color: #FFFFFF;
+        width: 400px;
+        height: 500px;
+        /* margin: 7em auto; */
+        float: left;
+        align-self: center;
+        margin-top: 50px;
+        margin-left: 80px;
+        border-radius: 1.5em;
+        box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+    }
+    .submit {
+      cursor: pointer;
+        border-radius: 5em;
+        color: #fff;
+        background: linear-gradient(to right, #9C27B0, #E040FB);
+        border: 0;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        font-family: 'Ubuntu', sans-serif;
+        margin-left: 35%;
+        font-size: 13px;
+        box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+    }
+
+
+
+
+
+
+
+</style>
+
+</body>
+
+
+{% endblock %}
+</html>

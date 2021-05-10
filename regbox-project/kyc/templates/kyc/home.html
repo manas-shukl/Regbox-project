@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <style>
+
+
+.button {
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: white;
+  color: black;
+  border: 2px solid #4CAF50;
+  position: relative;
+  left: 120px;
+  top: 10px ;
+  border-radius: 8px;
+}
+
+.button1:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+.button2 {
+  background-color: white;
+  color: black;
+  border: 2px solid #4CAF50;
+  position: relative;
+ 
+  top: 10px ;
+  border-radius: 8px;
+}
+.button2:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+.button3 {
+  background-color: #4CAF50;
+  color: black;
+  border: 2px solid #4CAF50;
+  position: relative;
+ 
+  top: 10px ;
+  border-radius: 8px;
+}
+.button3:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+
+
+
+.service-area {
+  background: #f9f9ff; }
+  .service-area.white {
+    background: #fff; }
+  .service-area .col-lg-3.col-md-6:nth-child(1) .single-service {
+    background: #e2a599; }
+  .service-area .col-lg-3.col-md-6:nth-child(2) .single-service {
+    background: #715f69; }
+  .service-area .col-lg-3.col-md-6:nth-child(3) .single-service {
+    background: #e45447; }
+  .service-area .col-lg-3.col-md-6:nth-child(4) .single-service {
+    background: #90acd1; }
+
+
+.single-service {
+  color: #fff;
+  padding: 60px 30px;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s; }
+  @media (max-width: 1199px) {
+    .single-service {
+      padding: 30px 15px; } }
+  @media (max-width: 991px) {
+    .single-service {
+      margin-bottom: 30px;
+      padding: 60px 30px; } }
+  @media (max-width: 576px) {
+    .single-service {
+      text-align: center; } }
+  .single-service .lnr {
+    font-size: 36px;
+    color: #fff;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s; }
+  .single-service h4 {
+    color: #fff;
+    font-size: 21px;
+    line-height: 27px;
+    font-weight: 700;
+    margin-top: 30px;
+    margin-bottom: 20px; }
+    .single-service h4 span {
+      display: block; }
+      @media (max-width: 767px) {
+        .single-service h4 span {
+          display: inline-block; } }
+  .single-service:hover {
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+    transform: translateY(-10px); }
+
+   .try {
+     padding-top: 200px;
+   } 
+
+
+
+/*-------- Start About Area ------------*/
+.about-area .section-title {
+  margin-bottom: 0; }
+  @media (max-width: 1024px) {
+    .about-area .section-title {
+      padding-bottom: 0px; } }
+@media (max-width: 991px) {
+  .about-area .about-left {
+    display: none; } }
+.about-area .primary-btn.white {
+  margin-right: 10px; }
+  @media (max-width: 1199px) {
+    .about-area .primary-btn.white {
+      margin-right: 0;
+      margin-bottom: 15px; } }
+  @media (max-width: 991px) {
+    .about-area .primary-btn.white {
+      margin-bottom: 0px; } }
+  @media (max-width: 374px) {
+    .about-area .primary-btn.white {
+      margin-right: 0;
+      margin-bottom: 15px; } }
+
+/*-------- End About Area ------------*/
+
+
+/* footer */
+
+#button-addon1 {
+  color: #ffc371;
+}
+
+i {
+  color: #ffc371;
+}
+
+.form-control::placeholder {
+  font-size: 0.95rem;
+  color: #aaa;
+  font-style: italic;
+}
+
+.form-control.shadow-0:focus {
+  box-shadow: none;
+}
+
+
+body1 {
+  background: #4e0068;
+  background: -webkit-linear-gradient(to right, #421052, #4e0068);
+  background: linear-gradient(to right, #8c08b8, #351241);
+  min-height: 100vh;
+}
+
+
+
+
+
+
+    </style>
+
+
+    <meta charset="UTF-8">
+    <title>Regbox Home</title>
+</head>
+{% extends 'kyc/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+
+<body>
+<!--  id="bg" style="background-size: 1000px; background-repeat: none;  background-image: url('{% static 'image/BacgroundF.png' %}');" -->
+
+
+<h1 style="text-align:center;"></h1>
+<!--<a href="{% url 'loginuser' %}" >Login</a>-->
+<!--<a href="{% url 'upload' %}">Upload A Card</a>  <br>-->
+<!--<a href="{% url 'available_docs' %}">View already uploaded docs</a>-->
+
+<div>
+    <img style="width:100%;" src="{% static 'image/BacgroundF.png' %}" alt="">
+
+    <!-- <h2 style="padding-top: 120px;  padding-left: 120px; font-weight: 700;">Intelligent Document Review</h2> -->
+    <div class="content" style="margin-top: -40%; position: relative;">
+        <h2 style=" padding-left: 120px; font-weight: 700;">Intelligent Document Review</h2>
+        <h3 style=" padding-left: 120px; font-size: 20px; font-weight: normal;"> Regbox.io deep learning technology
+            automatically</h3>
+        <h3 style=" padding-left: 120px; font-size: 20px; font-weight: normal;"> reviews, identifies and extracts key
+            provisions from </h3>
+        <h3 style=" padding-left: 120px; font-size: 20px; font-weight: normal;"> corporate and legal documents.</h3>
+        <button class="button button1">--- Discover and Review</button>
+    </div>
+    <!-- <img class="img-fluid" src="{% static 'image/BacgroundF.png'%}" alt=""> -->
+    <!-- <br></br><br></br><br></br><br></br><br></br><br></br><br></br> -->
+
+
+</div>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+
+<div class="try">
+    <!-- Start Service Area -->
+    <section class="service-area section-gap">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h2>Service Offers</h2>
+                        <p>If you are looking at blank cassettes on the web, you may be very confused at the difference
+                            in price. You may see
+                            some for as low as $.17 each.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="single-service wow fadeInUp" data-wow-duration="1s">
+                        <span class="lnr lnr-screen"></span>
+                        <h4>
+                            <span>I’m a Professional</span>
+                        </h4>
+                        <p>If you are looking at blank cassettes on the web, you may be very confused at the difference
+                            in price. You may see
+                            some for as low as $.17 each</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="single-service wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
+                        <span class="lnr lnr-laptop-phone"></span>
+                        <h4><span>I’m a Data Scientist</span>
+                        </h4>
+                        <p>If you are looking at blank cassettes on the web, you may be very confused at the difference
+                            in price. You may see
+                            some for as low as $.17 each</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="single-service wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.4s">
+                        <span class="lnr lnr-database"></span>
+                        <h4><span>I’m a Developer</span>
+                        </h4>
+                        <p>If you are looking at blank cassettes on the web, you may be very confused at the difference
+                            in price. You may see
+                            some for as low as $.17 each</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="single-service wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s">
+                        <span class="lnr lnr-chart-bars"></span>
+                        <h4><span>Web</span>
+                        </h4>
+                        <p>If you are looking at blank cassettes on the web, you may be very confused at the difference
+                            in price. You may see
+                            some for as low as $.17 each</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<!-- End Service Area -->
+
+<div class="try">
+
+    <!-- Start About Area -->
+    <section class="about-area section-gap">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-lg-6 about-left">
+                    <img class="img-fluid" src="{% static 'image/Analytic.png'%}" alt="">
+                </div>
+                <div class="col-lg-5 col-md-12 about-right">
+                    <div class="section-title">
+                        <h2>Regbox automates Natural Language Processing & Deep Learning infrastructure and
+                            workflows</h2>
+                    </div>
+                    <div class="mb-50 wow fadeIn" data-wow-duration=".8s">
+                        <p>
+                            from end-to-end and accelerates the deployment of production-ready solutions.
+                        </p>
+                        <p>That’s why it’s crucial that, as Developer, our behavior on the job is beyond reproach.
+                            inappropriate behavior is often
+                            laughed.
+                        </p>
+                    </div>
+
+                    </a>
+                    <button class="button button1">--- Discover and Review</button>
+
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End About Area -->
+
+
+    <!-- footer -->
+
+    <body1 class="d-flex flex-column">
+        <!-- For demo purpose -->
+        <div class="container-fluid flex-grow-1 flex-shrink-0">
+            <div class="px-lg-5">
+                <div class="row py-5">
+                    <div class="col-lg-12 mx-auto text-white text-center">
+                        <h1 class="display-4">Receive a free demo</h1>
+                        <p class="lead mb-0">Integrate our solution with your current systems and secure process
+                            acceleration with minimal disruption.</p>
+                        <button class="button button3" style="align-self: center;">---- Demo ----</button>
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- End -->
+
+
+        <!-- Footer -->
+        <div>
+            <footer class="bg-white">
+                <div class="container py-5">
+                    <div class="row py-4">
+                        <div class="col-lg-4 col-md-6 mb-4 mb-lg-0"><img src="img/logo.png" alt="" width="180"
+                                                                         class="mb-3">
+                            <p class="font-italic text-muted">Receive a free demo
+                                Looking to learn more about our platform and do you want to receive a free demo from our
+                                team? Let us know and we’ll be in touch with you shortly!</p>
+                            <button class="button button2">---- Demo ----</button>
+                            <ul class="list-inline mt-4">
+                                <li class="list-inline-item"><a href="#" target="_blank" title="twitter"><i
+                                        class="fa fa-twitter"></i></a></li>
+                                <li class="list-inline-item"><a href="#" target="_blank" title="facebook"><i
+                                        class="fa fa-facebook"></i></a></li>
+                                <li class="list-inline-item"><a href="#" target="_blank" title="instagram"><i
+                                        class="fa fa-instagram"></i></a></li>
+                                <li class="list-inline-item"><a href="#" target="_blank" title="pinterest"><i
+                                        class="fa fa-pinterest"></i></a></li>
+                                <li class="list-inline-item"><a href="#" target="_blank" title="vimeo"><i
+                                        class="fa fa-vimeo"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+                            <h6 class="text-uppercase font-weight-bold mb-4">Our Products</h6>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2"><a href="#" class="text-muted">Regbox</a></li>
+                                <li class="mb-2"><a href="#" class="text-muted">Gray Box</a></li>
+                                <li class="mb-2"><a href="#" class="text-muted">Analytics</a></li>
+                                <li class="mb-2"><a href="#" class="text-muted">Analysis</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+                            <h6 class="text-uppercase font-weight-bold mb-4">Danalitic</h6>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2"><a href="{% url 'loginuser' %}" class="text-muted">Login</a></li>
+                                <li class="mb-2"><a href="{% url 'signup' %}" class="text-muted">Register</a></li>
+                                <li class="mb-2"><a href="#" class="text-muted">Regbox</a></li>
+                                <li class="mb-2"><a href="#" class="text-muted">About</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mb-lg-0">
+                            <h6 class="text-uppercase font-weight-bold mb-4">Newsletter</h6>
+                            <p class="text-muted mb-4">To connect with us</p>
+                            <div class="p-1 rounded border">
+                                <div class="input-group">
+                                    <input type="email" placeholder="Enter your email address"
+                                           aria-describedby="button-addon1" class="form-control border-0 shadow-0">
+                                    <div class="input-group-append">
+                                        <button id="button-addon1" type="submit" class="btn btn-link"><i
+                                                class="fa fa-paper-plane"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Copyrights -->
+                <div class="bg-light py-4">
+                    <div class="container text-center">
+                        <p class="text-muted mb-0 py-2">© 2021 Regbox All rights reserved.</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </body1>
+    <!-- End -->
+
+
+</div>
+
+</body>
+
+{% endblock %}
+</html>
+

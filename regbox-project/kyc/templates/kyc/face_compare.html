@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title style="font-family: Georgia, 'Times New Roman', Times, serif;">Face Compare</title>
+</head>
+{% extends 'kyc/base.html' %}
+{% load static %}
+{% block content %}
+<!-- <body> -->
+
+
+<body style="background-size: cover; background-repeat: none;  background-image: url('{% static 'image/facebg.png' %}');">
+<div class="card">
+    <h1 style="text-align: center; padding-top: 50px; "> FACE COMPARE </h1>
+
+    <form action="{% url 'face_compare' %}" method="post">
+
+        <select name="doc_name" class="filter-selectbox">
+            {% for doc in docs %}
+            <option value="{{ doc.file_name }}">{{ doc.file_name }}</option>
+            {% endfor %}
+        </select>
+        <br><br>
+        {% csrf_token %}
+        <button type="submit" class="submit">Capture my image</button>
+        <!--<button type=""-->
+    </form>
+</div>
+
+<style>
+    .card {
+
+        align-content: center;
+        background-color: #FFFFFF;
+        width: 450px;
+        height: 400px;
+        /* margin: 7em auto; */
+        float: left;
+        align-self: center;
+        margin-top: 50px;
+        margin-left: 550px;
+        border-radius: 1.5em;
+        box-shadow: 0px 11px 35px 2px rgba(145, 221, 5, 0.14);
+    }
+    .submit {
+      cursor: pointer;
+        border-radius: 5em;
+        color: #fff;
+        background: linear-gradient(to right, #9C27B0, #E040FB);
+        border: 0;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        font-family: 'Ubuntu', sans-serif;
+        margin-left: 130px;
+        font-size: 13px;
+        box-shadow: 0 0 20px 1px rgba(63, 133, 35, 0.733);
+    }
+    .filter-selectbox {
+        cursor: pointer;
+        border-radius: 5em;
+        color: #fff;
+        background: linear-gradient(to right, #9C27B0, #E040FB);
+        border: 0;
+
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        font-family: 'Ubuntu', sans-serif;
+        margin-left: 130px;
+        font-size: 13px;
+        box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+    }
+
+
+
+
+</style>
+
+</body>
+{% endblock %}
+</html>
+
